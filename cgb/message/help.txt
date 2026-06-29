@@ -1,0 +1,385 @@
+#
+@(#) $Header: README, 97/10/02
+#
+@ CrazyGuestbook Version 3.2.2
+@ By Seung-young, Kim
+@
+@ 대한민국 홍익대학교 신안 캠퍼스 
+@ 제작자 : 김 승 영 (nobreak@cgiserver.net)
+@ 소  속 : Nobreak Technologies
+#
+
+*. License
+
+  1. 본 CrazyGuestbook(이하 CGB)은 공개소프트웨어(Freeware)이다.
+
+  2. CGB의 사용방법, 사용목적, 사용형태에 관하여 어떠한 제약도 없다.
+
+  3. CGB의 모든부분에 관해 사용자는 수정을 가할수 있다.
+
+  4. CGB의 사용으로 겪을수 있는 불이익에 제작자는 물리적 배상 의무가 없다.
+
+  5. 제작자는 CGB의 모든 저작권및 권한을 사용자에게 반환한다.
+
+  6. Freedom
+
+**. 기능 설명
+
+  1. 통합 관리 툴 제공으로 웹상에서 각 DB의 Configuration을 수정할수 있다.
+
+  2. 하나의 CGI로 구현되므로 관리가 용이하다.
+
+  3. 방명록 추가 내용을 E-mail로 확인할수 있다.
+
+  4. 페이지당 출력량을 조절할수 있다.
+
+  5. 게시물의 내용중 URL과 E-mail은 자동으로 링크가 생성된다.
+
+  6. 안정적이다.
+
+***. Changes 
+
+  *) Version 3.2.2
+     1. MailToAdmin을 disable 시켜도 편지를 보내던 오류 수정 
+
+  *) Version 3.2.1
+     1. Explore에서 각 게시물의 크기가 다르게 보인점 수정
+     2. 페이지당 게시물 갯수 조정기능 삽입
+
+  *) Version 3.2
+     1. 게시물을 관리자에게 편지로 발송 기능 삽입
+
+  *) Version 3.1
+     1. 게시물을 개별 table에 삽입
+
+  *) Version 3.0
+     1. 여러개의 DB 지원
+     2. DB 구조 변경
+     3. 인터페이스 변경
+     4. 관리메뉴 통합
+
+I. 배포판의 화일명
+
+   Type-1) Installation Package (Compile)
+
+   FILENAME : CrazyGuestbook-VersionNumber.tar.Z
+   
+   ex) Version 2.4
+       - CrazyGuestbook-2.4.tar.Z
+
+   Type-2) Binary (CGI만이 배포된다)
+
+   FILENAME : CrazyGuestbook.cgi-VersionNumber-export-Platform.Z
+
+   ex) Version 2.4의 Sparc SUN Solaris 2.4 Binary 형태로 배포
+       - CrazyGuestbook.cgi-2.4-export-sparc_sun_solaris_2.4.Z
+
+
+II. Install
+
+   1. 압축 풀기
+
+     Type-1) Installation Package (Compile)
+
+     설치할 Server의 해당 Directory로 배포본을 이동(move) 한다.
+        - move /SOURCE_DIRECTORY/FILENAME /TARGET_DIRECTORY/
+          ('/cgi-bin' 아래에 설치하려는 사용자는 아래의 'HTTPd Configuration'를 참고바란다.)
+
+     압축을 푼다.
+       - uncompress FILENAME.tar.Z  (.Z 확장자는 자동 삭제 됨)
+       - tar xvfp FILENAME.tar
+         ('guestbook-VersionNumber'의 디렉토리가 생성되며 압축이 풀린다.)
+         (이하 'guestbook'이란 디렉토리가 생성되었다고 가정한다.)
+
+     Type-2) Binary (Compile)
+
+     먼저 Installation Package가 설치되어 있어야 한다.
+
+     설치된 디렉토리로 Binary를 이동(mv)한다.
+        - move /SOURCE_DIRECTORY/FILENAME /TARGET_DIRECTORY/
+
+     압축을 푼다.
+       - uncompress FILENAME.Z  (.Z 확장자는 자동 삭제 됨)
+
+     파일명을 바꾼다.(mv)
+       - mv FILENAME CrazyGuestbook.cgi
+
+     Note) Binary 배포는 사용자의 서버가 아래의 사항에 만족함을 가정한다.
+       - 파일의 확장자가 'cgi'이면 CGI로 인식하고 실행한다.
+       - CGB이 설치된 디렉토리는 ScriptAlias로 지정되지 않아야 한다.
+
+     Note) 'HTTPd Configuration'에 기술되는 '권고 설치'를 참고하기 바란다.
+
+   2. Compile
+
+     ** Binary 설치시는 본 항목을 건너 뛴다.
+
+     install-sh을 실행한다.
+     (C Compiler가 반드시 설치되어 있어야 하며, 기본설정은 'gcc'로 되어 있다.)
+     (자신의 PATH가 gcc에 접근할수 있는지 먼저 확인해 보기 바란다.)
+     (gcc 이외의 Compiler가 설치되어 있을경우 'guestbook/src/Makefile'을 수정한다.)
+       - cd /guestbook
+       - ./install-sh
+
+     Compile이 성공적으로 완료되면 'CrazyGuestbook.cgi' CGI가 생성된다.
+
+  3. 실험
+
+     CrazyGuestbook을 Link하고자 하는 HTML문서나 Browser의 Location에
+     아래의 문자열을 삽입한다.
+
+     '목록 보기 링크'를 설정하고 싶을 경우 아래와 같이 한다.
+
+     http://SERVER DOMAIN/DIRECTORY/guestbook/CrazyGuestbook.cgi?db=test
+
+     ex) <A HREF="http://nobreak.cgiserver.net/cgi-bin/guestbook/CrazyGuestbook.cgi?db=test">CrazyGuestbook</A>
+
+     '방명록 작성 링크'를 설정하고 싶을 경우 아래와 같이 한다.
+
+     http://SERVER DOMAIN/DIRECTORY/guestbook/CrazyGuestbook.cgi?db=test&mode=write
+
+     ex) <A HREF="http://nobreak.cgiserver.net/cgi-bin/guestbook/CrazyGuestbook.cgi?db=test&mode=write">Sign</A>
+
+     Note) 'test' DB는 기본 제공된다. (guestbook/data/test)
+
+     Note) ICON이 깨어져 나오거나, 실행이 거부될때는 Server Configuration을
+           조정해주어야 한다. (아래 HTTPd Configuration 참조)
+
+
+  4. DB 생성
+
+     'guestbook/data' Directory 밑에 원하는 DB를 생성한다.
+     
+       - cd guestbook/data
+       - mkdir DB_NAME
+       - chmod 777 DB_NAME
+
+     보안의 문제가 우려될시에는 생성할 DB의 Permission을 Web Server가
+     구동되는 User의 UID와 GID로 설정한다.
+
+       - cd guestbook/data
+       - mkdir DB_NAME
+       - chmod 700 DB_NAME
+       - chown WEB_SERVER_UID DB_NAME
+       - chgrp WEB_SERVER_GID DB_NAME
+       
+     Note) DB의 생성에 있어 사용자는 단지 DB Directory를 생성하는것으로
+           임무가 완료된다. 사용자는 단순히 DB를 생성하고, Web Browser로
+           접속하여 Password와 기타 Link Location등을 Setting한다.
+           초기 접속시 Configuration을 설정하라는 에러가 나타난다.
+
+  5. DB 삭제
+
+      - cd guestbook/data
+      - rm -rf DB_NAME     
+
+     Note) DB의 삭제는 단순히 해당 Directory를 삭제하는것으로 끝난다.
+
+
+  6. DB Configuration 설정
+     게시판 목록보기 화면에서 'Admin' Icon을 클릭 함으로써 수정할수 있다.
+
+      New Password  : 새로운 비밀번호를 설정한다.
+      Title Message : 목록보기 상단에 나타날 Text 이다.
+      HomePage URL  : 자신의 홈페이지가 링크될 주소이다
+                      (생략시 ICON이 출력되지 않는다)
+      Back URL      : 홈페이지 URL와 이전페이지 URL이 다를겨우 설정한다.
+                      (생략시 ICON이 출력되지 않는다)
+      Link Target   : 자동 링크된 글이 Current Frame으로 출력될지
+                      Full Screen으로 출력될지를 결정한다.
+                      (Frame을 사용한 홈페이지에서만 효과가 있다)
+      View Mode     : 표시될 언어를 선택한다.
+      HTML Mode     : 방명록 내용중 HTML TAG를 인식할지 화면에 그대로 출력 할지 결정.
+                      무시를 선택하면, TAG자체가 화면에 표시되고, URL, E-mail등은
+                      자동 링크 된다.
+
+      Administrator Name    : 관리자의 이름
+      Administrator E-mail  : 관리자 E-mail
+      Mail to Administrator : 게시물이 추가되면 그 내용을 E-mail로 관리자에게 통보할지
+                              결정한다.
+
+      Table Width       : 목록보기 화면의 크기를 Pixel 단위로 지정한다
+      Articles per Page : 한 화면당 보여줄 글의 갯수를 지정한다.
+
+      Field 'XXXXXXXX'  : 'XXXXXXXX'에 해당하는 항목의 방명록 작성 여부
+                           Hidden은 해당 항목을 쓰기화면에서 숨김
+                           Appear는 해당 항목을 쓰기화면에 출력(작성 안되면 무시)
+                           Must는 Appear + 반드시 작성되어야 기록함
+
+III. HTTPd Configuration
+
+  프로그램의 설치 위치와 Server Configuration에 따라 다음과 같은 오류가 발생할수 있다.
+
+  만약 프로그램의 실행에 오류가 발생하였다면, '권고 설치' 방법을 고려해보기 바란다.
+
+  *. 권고 설치
+     웹서버가 존재하는 디렉토리를 'httpd'라 가정하면, Document root는 일반적으로
+     'httpd/htdocs'며, CGI root는 'httpd/cgi-bin'이다.
+
+     1) 여기에 새로운 디렉토리(cgi-pub)를 생성한다.
+       - cd httpd
+       - mkdir cgi-pub      ('httpd/cgi-pub' 생성)
+
+      'httpd/cgi-pub/guestbook' 디렉토리에 CGB을 설치한다.
+
+     2) 서버 설정에 아래의 사항을 추가한다.
+     [NCSA HTTPd]   conf/srm.conf
+       AddType application/x-httpd-cgi .cgi
+       Alias /cgi-pub/ /FULL_PATH/cgi-pub/
+
+     3) 서버를 재시작 한다.
+
+     4) 사용자는 아래의 경로에서 CGB을 실행할수 있다.
+       http://HOST_NAME/cgi-pub/guestbook/CrazyGuestbook.cgi
+
+     Note) cgi-bin과 cgi-pub 이외의 디렉토리에서 CGI가 거부되길 원한다면,
+           '1. 실행이 거부되는 경우, 해결방법 1' 참조     
+
+
+  1. 실행이 거부되는 경우
+     HTTP Daemon(Web Server)은 보안을 위해 기본적으로 'cgi-bin' 이외의
+     디렉토리에 설치된 CGI화일의 실행을 거부한다.
+
+     ** 해결방법 1 : Server Configuration 변경
+     사용자는 아래와 같은 사항을 추가해 줌으로써 파일의 확장자가 'cgi'이면
+     이를 CGI로 인식하여, 어느 Directory에서나 실행토록 설정할수 있다.
+     
+     [NCSA HTTPd]   conf/srm.conf
+       AddType application/x-httpd-cgi .cgi
+     
+     이는 모든 디렉토리에 관해 확장자가 'cgi'이기만 하면 실행이 되므로,
+     계정 서비스를 하는 곳에서는 이를 피하려 할수 있다.
+     그때는 '방법 2'를 취하거나 다음과 같이 일반 계정에서는 CGI 실행을 거부할수 있다.
+
+     [NCSA HTTPd]   conf/access.conf
+       <Directory /admhome/*>   ## /admhome/ACCOUNT 계정 사용자 CGI 실행 허가
+         Options ExecCGI Indexes FollowSymLinks
+       </Directory>
+
+       <Directory /home/*>      ## /home/ACCOUNT 계정 사용자 CGI 실행 불가
+         Options Indexes FollowSymLinks
+       </Directory>
+
+     Note) 기타 Web Server의 경우도 위와 비슷한 설정을 해주어야 한다.
+
+     ** 해경방법 2: Source code Modify
+     '해결방법 1'이 여의치 않다면, '/cgi-bin'밑에 설치를 하여야 한다.
+     일단 'cgi-bin' 밑에 CGB을 설치한후 'guestbook/icon' 디렉토리를
+     Document root(htdocs) 디렉토리 이하로 이동 한다.
+       ex) httpd/cgi-bin/guestbook/icon -> httpd/htdocs/guesticon
+
+     'guestbook/src/cgb.h'내용중 아래 항목을 수정한후 재 Compile한다.
+
+       #define PRG_NAME    "CrazyGuestbook"
+       #define HELP        "/PATH/help.txt"
+
+       #define ICON_ADMIN  "/PATH/admin.gif"
+       #define ICON_HOME   "/PATH/home.jpg"
+       #define ICON_BACK   "/PATH/back.jpg"
+       #define ICON_HELP   "/PATH/help.jpg"
+       #define ICON_WRITE  "/PATH/write.jpg"
+       #define ICON_DELETE "/PATH/delete.gif"
+       #define ICON_LIST   "/PATH/list.jpg"
+       #define ICON_UP     "/PATH/up.jpg"
+       #define ICON_DOWN   "/PATH/down.jpg"
+       #define HR_LINE     "/PATH/line.gif" 
+
+       Note) 여기서 '/PATH'는 Document root를 기준으로한 상대경로이다.
+
+  2. 깨어진 글짜만이 화면에 출력될 경우
+     사용자의 홈페이지 계정등과 같이 '/cgi-bin' 이외의 디렉토리에 설치 하였을 경우,
+     CGI의 확장자가 'cgi'이더라도 서버가 이를 일반 문서로 해석하고 그 내용을
+     출력하기 때문이다.
+
+     ** 해결방법 : Server Configuration 변경
+      [NCSA HTTPd]   conf/srm.conf
+        AddType application/x-httpd-cgi .cgi
+
+  3. ICON이 깨어져 나올경우
+      '/cgi-bin' 디렉토리 아래에 설치를 하였을경우 이다.
+      이는 서버가 '/cgi-bin' 이하에 설치된 모든 화일은 CGI라 가정하기 때문에
+      일반 ICON, HTML 화일도 실행하려 시도하기 때문이다.
+
+    ** 해결방법 1 : Server Configuration 변경
+      다음과 같이 'cgi-bin' 디렉토리를 'ScriptAlias'가 아닌 'Alias'로 설정하여
+      해결할수 있다.
+      이때는 반드시 'AddType'으로 확자자 'cgi'를 CGI로 인식시켜야 한다.
+
+      [NCSA HTTPd]   conf/srm.conf
+        AddType application/x-httpd-cgi .cgi
+        #ScriptAlias /cgi-bin/ /PATH/cgi-bin/     ('#' 로 주석처리한다)
+        Alias /cgi-bin/ /PATH/cgi-bin/     (cgi-bin을 Alias로 설정한다)
+
+      이때, 확장자가 없는 '/cgi-bin'밑의 기존의 CGI는 실행이 거부되므로,
+      기존의 CGI 파일명을 변경하여야 한다.
+      기존의 CGI 변경이 용이치 못한경우 '해결방법 2'를 행한다.
+
+    ** 해경방법 2 : ICON 위치 바꿈
+       '1. 실행이 거부되는 경우, 해결방법 2'에서 'PRG_NAME'을 제외하고 수정한후
+       재 Compile 한다.
+
+  4. Sendmail(/usr/lib/sendmail -t) not found.
+    'sendmail'이 '/usr/lib/' 디렉토리에 없는 경우입니다.
+    cgb.h 에서 SENDMAIL_DIR 을 다음과 같이 바꾸어 주십시요.
+
+    #define SENDMAIL_DIR    "/usr/sbin"            ('/usr/sbin/' 디렉토리에 sendmail이 있을경우)
+
+  5. Permission및 기타문제
+     Web Server의 UID, GID와 해당 DB의 UID, GID가 틀릴 경우의 Permission 문제입니다.
+     -- cd guestbook/data
+     -- chmod 0777 DB_NAME
+        
+IV. Directory 설명
+     
+     압축을 푼 Directory 밑에 아래와 같은 구조의 Directory가 생성된다.
+     
+      guestbook-VersionNumber --+-- message
+                                |
+                                +-- icon
+                                |
+                                +-- data
+                                |
+                                +-- qDecoder-3.4
+                                |
+                                +-- src
+
+     Directory 'guestbook-VersionNumber'
+       - CrazyGuestbook.cgi  (CGI Binary)
+       - install-sh          (Install Script)
+       - README              (This document)
+
+     Directory 'message'   -> CGI내에서 참조하는 화일들
+       - listhead.html     (목록보기 처음에 보여줄 HTML문서)
+       - listtail.html     (목록보기 꼬리에 보여줄 HTML문서)
+       - writehead.html    (방명록 작성 처음에 보여줄 HTML 문서)
+       - writetail.html    (방명록 작성 꼬리에 보여줄 HTML 문서)
+       - adminhead.html    (Admin Tool 처음에 보여줄 HTML 문서)
+       - admintail.html    (Admin Tool 꼬리에 보여줄 HTML 문서)
+       - mailhead.txt      (E-mail 처음에 붙여질 문서)
+       - mailtail.txt      (E-mail 꼬리에 붙여질 문서)
+       - help.txt          (도움말 화일)
+       - *.gif, *.jpg      (위의 HTML 문서에서 참조하는 Image Files)
+     
+     Directory 'icon'    -> CGI에서 사용되는 ICON
+       - admin.jpg         (Admin Link)
+       - delete.jpg        (Delete Link)
+       - home.jpg          (HomePage Link)
+       - back.jpg          (Previous Page Link)
+       - help.jpg          (Help Link)
+       - write.jpg         (Write Link)
+       - list.jpg          (List Link)
+       - down.jpg          (List Forward Link)
+       - up.jpg            (List Backward Link)
+
+     Directory 'data'     -> DB(Data Base)가 관리되는 Directory
+       - .htaccess         (사용자가 DB를 열람 못하도록 한다)
+       - test              (기본 제공되는 실험용 DB, Permission 777)
+       - DB_NAME           (사용자가 사용할 DB명)
+       
+     Directory 'data/DB_NAME'  -> (사용자가 추가한 DB)
+       - db.conf           (DB에 관련된 Configuration Data)
+       - lastnum.conf      (마지막 저장 Article 번호)
+       - count.conf        (DB Access Counter)
+       - NUMBER.dat        (User가 작성항 글)
+       
+------- [ END ] ------
