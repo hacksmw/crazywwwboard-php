@@ -1,0 +1,556 @@
+#
+@(#) $Header: README, 97/11/11
+#
+@ This document is translated by 'Gyu-sang, Cho'.
+#
+
+*. Œï ‘õ
+
+  ˆŸ. Ğ”`“¬ì ‘C¶ v ‘EÙØ ‘A’j †
+  ŠI. ‡‹ ‰sŞ (License)
+  Š×. –‘N(Version) ‘C¶
+  ‹ñ. ‰‚ŠÇ ±Œë
+  Œ´. ±’Ÿ †
+
+ˆŸ. Ğ”`“¬ì ‘C¶ v ‘EÙØ ‘A’j †
+
+  1. Ğ”`“¬ì ‘C¶
+    - TMŒë’¨ : CrazyWWWBoard
+    - ‰XMŒë’¨ : k’¡ˆÒb“Å
+    - ‘]    Œ™ : CGI
+    - ‹    ‹T : £“@« ‹^Ù‹fŠÀ ˆÒb“Å
+    - Platform : Unix
+    - MÅ‘uĞ : Administrative contact - webmaster@cgiserver.net
+                 Technical      contact - nobreak@cgiserver.net
+    - ˆ “õ ’R : http://www.cgiserver.net
+                 ftp://ftp.cgiserver.net
+
+  2. ‡‹ ‹ñÊèŒNŒ¬
+    - qDecoder CGI Library
+    - gdbm DB Library
+
+  3. ‘EÙØ ‘A’j †
+    - Œ¶ ‹‡ Ê : ‰ˆaT (Seung-young, Kim)
+    - “ë‘–‘uĞ : nobreak@cgiserver.net
+    - Ğ    Ñ : Nobreak Technologies
+
+  4. ‹T’‘udÎ
+    - Byung-geol, Lee  (bglee@shinan.hongik.ac.kr)
+    - Sang-hyun,  Park (shpark@shinan.hongik.ac.kr)
+    - Jee-whan,   Choi (u9000549@chollian.net)
+    - John,       Kim  (jkim@rainbowsys.com) 
+    - Gyu-sang,   Cho  (cho@ibi-japan.com)
+
+ŠI. ‡‹ ‰sŞ (License)
+
+  1. ¹ CrazyWWWBoard(Ê”n CWB)ŠÀ ˆöˆ±Ğ”`“¬ì(Freeware)ÊŠ×.
+
+  2. ‘EÙØŠÀ CWBÅ Œî‹‡ øÙ‰fv ‰f”p¹ ‡‹Ø@ˆÒ |”­”nŒå ÊŠÀ Š×»¹ ‹ä”pŠ×.
+     1) CWBÅ ‡‹†, ‡‹Œïù, ‡‹”œ“a@ ˆú”p ‘EŞÊ öŠ×.
+     2) CWBÅ Œî‹‡ÌÎ¹ ‡‹ØŠÀ ÑÅŒm ô‘C”qô ÔŠ×.
+     3) CWBŒ¤ “‹Ğ”`“¬ì@ Ò”nH “ÅŒÃ”qô ÔŠ×.
+
+  3. CWBÅ úÌ ”¢¸ ÍÌ ĞYˆŸ Ò‹g ì”bŒ¬’ÇÊÅ@ˆú”w ‘EÙØŠÀ ‰f”p¹
+     ”€‡”n‘– ÈŠÀŠ×.
+
+  4. ‡‹ØŠÀ CWBŒ¤ ‡‹”nŒå ˆÜŠÀ M‘E‘@@ˆú”w ‘EÙØ@ˆÒ ‘Uî”w‘x ÅJŒ¤
+     ˆ¬¶Œå, ÊŠÀ ‘ZŠó n¬”nˆë Ø­Œm Ğ”`“¬ì ‘EÙ@ ŒïùÊ ÔŠ×.
+
+  5. CWBÅ ‡‹¶Œm ˆÜ¹ô ÔŠÀ ĞÊË@ ‘EÙØŠÀ OŒ¬ù ˆ“ ÅJˆŸ öŠ×.
+
+  6. Freedom
+
+
+Š×. –‘N ‘C¶
+  * –‘N¸ a.b.c Å ”–“aŒ¤ ’‹”nŒå aŠÀ “J ‰‚ŠÇÅ ­”« ‹ÅŠÀ ”¡”­¸Ê ˆßH‹h‹¥
+    1 ‘•ˆŸ”nˆë, bŠÀ ”¡”­¸Ê ­‘–‹fŒç« Ù¸ ‰‚ŠÇÅ ­”«ˆŸ Ô¹‹¥ ­”«Å
+    ‘C‹TŒ¶“L n ‘•ˆŸ”nŒå, cŠÀ ‰‚ŠÇ­”«öÊ –‰vŒ¤ ô‘C”nS¹‹¥ –‰v ô‘CåŒ¶“L
+    n ‘•ˆŸ”pŠ×.
+
+  - Version 3.0
+     1. “ÂÍ õŒm‹…, M« ’VÌ ‰‚ŠÇ
+     2. DB® –“ ­ˆä ‰‚ŠÇ
+     3. DB® ŒÑŒ²Œ¹ˆø ‰½Œ²Œ¹ HTML ˆúŒ¬‰‚ŠÇ@« ˆúŒ¬
+     4. “ë‘– Ùdb DB® ŒÑŒ²Œ¹ˆø ‰½Œ²Œ¹ ˆúŒ¬‰‚ŠÇ@« ˆúŒ¬
+     5. ˆÒbO ¶‰‚”«Œç@« Êú ˆÒbO, Š×» ˆÒbO, °‰‚ Œ³“H ’~ˆŸ
+     6. fbˆ¡ ±‘C“ÂÍ ‘–˜
+     7. ˆÒbO Ù¸”«Œç@ ÑÅÅ ‰z¹ ‰‚¹¶Œm ”D‰‚
+     8. ˆÒbO ˜”¡ ˆ¦’~‰‚ ‰‚ŠÇ
+     9. ˆŸ“ ˜”¡ ‰‚ŠÇ (OŒ¬ùÌ ˆë­ ˜”¡ˆŸ ÄŠÏ, ˆæŠ@Å”p “Šé ˜”¡)
+     10. ˆÒbO “øŠó ÄÊ’Ú ˆ¦’~‰‚ ‰‚ŠÇ
+     11. ‰zØ“H‰‚ ‘Uû‰‚ŠÇ
+     12. ‹ñÌ wrap‰‚ŠÇ
+     13. ŒïŒn¶‰‚@« «’Ÿ‰‚ŠÇ ˆ¦’~‰‚ ‰‚ŠÇ
+     14. Access Log ‰‚ŠÇ
+     15. ’ë“O Œî‹‚ ô‘C
+
+  - Version 2.1
+     1. Error Log ‰‚ŠÇ
+     2. ’ë“O ‘EˆÃ, ˆúŒ¬ ÄÊ’Ú ù‰ˆ, ‹T’Œ¹ ÄÊ’Ú ù‰ˆ‰‚ŠÇ, cwb_define.h
+     3. ’ë“O ±‘C¶Æ.
+
+  - Version 2.0.3
+     1. Cookie Enable/Disable hÅ ’~ˆŸ : cwb_define.h
+     2. ICON ­ˆä
+     3. Netscape@« ˆ¡”¢ ŠI“WŠIŠÀ Internal Server Error _Œ™ ô‘C
+
+  - Version 2.0.2
+     1. ‰W–‘NÅ gcc, make ‡‹b ~”nŠÀ ÌY“‡ @ŒN ô‘C
+
+  - Version 2.0.1
+     1. Netscapel Explore@« ‹^Í”p Ì“l“âÊY ‘–˜
+     2. ŒìŒì OS@« ”p‰z ˆÉ– M‘E‘@ ô‘C
+
+  *) Version 2.0
+     1. gdbm DB Manager ‹TÒ (1.xl ”¡”­Æ‹i, DB Converter ‘Eˆö)
+     2. qDecoder CGI Library ‹TÒ
+     3. Ì“l“âÊY ­ˆä
+     4. ˆúŒ¬ŒÜŠ¸ “‹”t
+     5. ˆÒb“Å “ë‘–¶ŠZ‰‚ ‰‚ŠÇ ‹TÒ
+     6. fbˆ¡ Ì‹Ek Œ¬Y“¬Œm ­”­
+     7. ˆúŒb‰z°‰‚ ‘–˜
+
+
+‹ñ. ‰‚ŠÇ ±Œë
+
+  1. Šé”D ‰‚ŠÇ
+    1. ”nŠIÅ “‹”t‹g CGIŒm ‰W”–
+    2. Š×ôÅ ˆÒb“Å ‘–˜
+    3. a‹ñÌ ˆúŒ¬ŒÜŠ¸ ‘Eˆö
+    4. ˆúŒb‰z °‰‚ ‰‚ŠÇ
+    5. Threaded listing ‘–˜
+    6. “âÊ‘–Šå ’‚ŒaŒM ‘Uû ‰‚ŠÇ
+    7. ”«Œç ‰W¸ ô‘C‰‚ŠÇ
+    8. fbˆ¡ ±‘C“ÂÍ ‘–˜
+    9. URLl Email Ø‹^Œ³“H ‰‚ŠÇ
+    10. ’~ˆŸ ˆÒbO Email úŠÜ ‰‚ŠÇ
+    11. “ÂÍ õŒm‹…
+    12. “ÂÍ@ ‹›Œ£ ÄÊ’Ú ”Db‰‚ŠÇ
+    13. ‰zØ “H‰‚ ‘Uû ‰‚ŠÇ
+    14. Š×‰Xì ‘–˜
+    15. CPU Time ‰‚Œn
+    16. Œm‰v ‰‚ŠÇ
+    17. ˆúŒ¬Ø ˆÒbO Ù¸‰‚ŠÇ
+
+  2. M‘E‘@
+    1. ‹^‰‚‘]ˆ¡Å ˆÒb“Å ØŒŠÀ ”¡”­Ê ‹fŠI, Ê‰‚‘]ˆ¡@ŠÀ ”¡”­Ê ‹f‘– ÈŠÀŠ×.
+       bY“zˆ¡Å Byte orderˆŸ Š×Œ¥¶Œm« İ‰‚‹fŠÀ M‘EÊˆë, Œ¶Ş Ê‰‚‘]ˆ¡Å
+       ØŒ úÙÊ „‰W‹hb@ŠÀ DB -> ASCII , ASCII -> DB Å ­”­¹ ˆÃ’cİ”pŠ×.
+       XŒm Linux -> LinuxŒmÅ ØŒ d‰ˆ¸ ˆŸŠÇ”nŠI, Linux -> SolarisŒmÅ
+       d‰ˆ¸ ĞˆŸŠÇ”nŠ×.
+
+    2. Explore 3.x Êú –‘N@« 'javascript:history.go(-n)'@ Šé”p ‰‚ŠÇÊ
+       'javascript:history.back()'ˆø ‹^Í”p ‰‚ŠÇ¹ ˆŸ‘œ@ ‹›‹ñ, ˆÒbO¹
+        ¹”Â ŒïŒn¶‰‚ ”«Œç¹ ¯“b”nŒç, xŒm ú ”«ŒçÊ ”Db‹gŠ×.
+        ˆÒbO¹ ¯“b”p”Â, Š×b Š×» ˆÒbO¹ ¶ˆëŠIŒç, f‘EŒm Œ¬Y“¬ Œ³“HŠÀ
+        'javascript:history.go(-2)'Å ˆ¨¹ ˆŸ‘–ˆÒ ‹fŠI, Explore 3.x @«ŠÀ
+        ÊˆË¹ ˜”nŠÀ ”œ“aŠéŒm ô”€”n‘– Œö”pŠ×.
+        ÊŠÀ Œ¬Y“¬ Œ³“HŒ¤ CGI Ø’[@ ˆÇì ‡‹ØˆŸ ”f‹…‰¹ }‰‚‰‘–Å ‰‚Š×Œ°¹
+        ‘xÊˆëØ, ’±K@ ŠQÄÔŠö Œ¬Y“¬ ”«Œç¹ ¶H‘uˆëØ ‰W”–‹g ‰‚ŠÇÊŠ×.
+
+    3. Explore 2.x Ê”n –‘N@« 'onMouseOver' Øx Y“HŒ±“¬Œ¤ Ìc”n‘– Œö”nH
+       ŒïŒn¶‰‚”«ŒçÊ ‰šì‘˜Š×.
+
+
+Œ´. ±’Ÿ †
+
+  1. ˆ“õ“ÅÅ ”«ÍŒë
+
+    Type-1) Installation Package (Compile)
+
+    FILENAME : CrazyWWWBoard-VersionNumber.tar.Z
+   
+    ex) Version 2.0
+        - CrazyWWWBoard-2.0.tar.Z
+
+    Type-2) Binary (CGIf”€”«Íˆø DB¸”«ÍŒ¶Ê ˆ“õ‹gŠ×)
+
+    FILENAME : CrazyWWWBoard-VersionNumber-export-Platform.tar.Z
+
+    ex) Version 2.0¹ 'Sparc SUN Solaris 2.4' Binary ”œ“aŒm ˆ“õ
+        - CrazyWWWBoard-2.0-export-sparc_sun_solaris_2.4.tar.Z
+
+  2. ±’Ÿ
+
+    1. Î’€ ”M‰‚
+
+      Type-1) Installation Package (Compile)
+
+      ±’Ÿ”q ServerÅ ”wŠå DirectoryŒm ˆ“õ¹¹ Ê‹^(move) ”pŠ×.
+       - move /SOURCE_DIRECTORY/FILENAME /TARGET_DIRECTORY/
+         ('/cgi-bin' ÄŒ@@ ±’Ÿ”nŒ`ŠÀ ‡‹ØŠÀ ÄŒ@Å 'HTTPd Configuration'¹
+           ‘úˆëx‹óŠ×.)
+
+      Î’€¹ ”KŠ×.
+       - uncompress FILENAME.tar.Z  (.Z ”¬ãØŠÀ Ø‹^ ˆ‘E ‹i)
+       - tar xvfp FILENAME.tar
+         ('wwwboard-VersionNumber'l ˆ®¸ ”œcÅ ‹ŒY“„Œ¬ˆŸ ¸‹fŒå Î’€Ê
+           ”MŒ®Š×.)
+         (Ê”n 'wwwboard'‹ó ‹ŒY“„Œ¬ˆŸ ¸‹føŠ×ˆë ˆŸ‘C”pŠ×.)
+
+      Type-2) Binary (Executable)
+
+      ŒÓø Installation PackageˆŸ ±’Ÿ‹fì Ôìİ ”pŠ×.
+
+      ±’Ÿ‹g ‹ŒY“„Œ¬(wwwboard)Œm BinaryŒ¤ Ê‹^(mv)”pŠ×.
+       - move /SOURCE_DIRECTORY/FILENAME /TARGET_DIRECTORY/
+
+      Î’€¹ ”KŠ×.
+       - uncompress FILENAME.tar.Z  (.Z ”¬ãØŠÀ Ø‹^ ˆ‘E ‹i)
+       - tar xvfp FILENAME.tar
+         (f”€‹fŠÀ ‹ŒY“„Œ¬ 'CrazyWWWBoard.cgi'l 'createDB'ˆŸ ¸‹gŠ×.)
+
+      Note) Binary ˆ“õŠÀ ‡‹ØÅ «–ˆŸ ÄŒ@Å ‡”v@ Œ¶‘V”s¹ ˆŸ‘C”pŠ×.
+       - “ÂÍÅ ”¬ãØˆŸ 'cgi'ÊŒç CGIŒm Ìc”nˆë f”€”pŠ×.
+       - CWBˆŸ ±’Ÿ‹g ‹ŒY“„Œ¬ŠÀ ScriptAliasŒm ‘–‘C‹f‘– ÈÄİ ”pŠ×.
+
+      Note) 'HTTPd Configuration'@ ‰‚ø‹fŠÀ '‰fˆë ±’Ÿ'Œ¤ ‘úˆë”n‰‚ x‹óŠ×.
+
+    2. Compile
+
+      ** Binary ±’ŸbŠÀ ¹ ”vŒï¹ ˆÅŠi ‹ØŠ×.
+
+      install-sh¹ f”€”pŠ×.
+      (C Compiler, ar, ranlibˆŸ ±’Ÿ‹fì Ôìİ ”nŒå, CompilerŠÀ 'gcc'Œm
+       ‰‚¹ ±‘C ‹fì ÔŠ×.
+       ØdÅ PATHˆŸ ¥Å Ğ”`“¬ì@ ‘A‰x”qô ÔŠÀ‘– ŒÓø ”¬Ì”w ¶‰‚ x‹óŠ×.
+       gcc Ê{Å CompilerˆŸ ±’Ÿ‹fì Ô¹ˆäŒ 'wwwboard/src/Makefile'¹
+       ô‘C”pŠ×.)
+       - cd /wwwboard
+       - ./install-sh
+
+     CompileÊ ¸ˆöù¶Œm nŒ‹fŒç ÄŒ@Å f”€”«ÍÊ 'wwwboard' ÄŒ@ ¸‹gŠ×.
+       - CrazyWWWBoard.cgi
+       - createDB
+
+    3. DB ¸
+
+      Œ¶Ş £«–Å UID, GIDl ±’Ÿ‹g CWBÅ ‹ŒY“„Œ¬v f”€“ÂÍÅ ‰vˆËÊ
+      Š×Œ¡Š×Œç, DBÅ ¸@ Ó« 'CrazyWWWBoard.conf' fbˆ¡ ±‘C“ÂÍ¹
+      Lˆë ‘u¬¹ ‘úˆë”nH ”wŠå ”vŒï¹ ô‘C”pŠ×.
+      (¹ “ÂÍ¸ fbˆ¡¶Œm ‘ú‘U‹ffŒm, CWBŒ¤ Š×b ’Â“ÂÍ ”q ”i„ˆŸ öŠ×)
+
+      DBˆŸ øã‹fŠÀ ˆõ¸ 'wwwboard/data' Directory ÊŠ×.
+      DBÅ OŒ¬ù “ÂÍŒë¸ 'DB_NAME.gdbm' ÊŠ×.
+      ex) 'test' dbÅ OŒ¬ù “ÂÍŒë¸ 'test.gdbm' ÊŠ×.
+
+       - cd wwwboard
+       - ./createDB DB_NAME
+       - chmod 777 data/DB_NAME.gdbm
+
+     Ù¸‹g ˆÒbOÅ Œî‹‡ ŠZ‹¸ ¹“ÂÍ@ øãÊ‹fŒå, õŒm‹™‹g “ÂÍ¸
+     'wwwboard/data/DN_NAME' ‹ŒY“„Œ¬@ øã‹gˆë ‹ŒY“„Œ¬ŠÀ Ø‹^¶Œm ¸‹gŠ×.
+
+     ‘uÅ) ‰‚‘WÅ 2.x –‘N ‡‹ØŠÀ ‘Wå”pŠÀ DB “ÂÍ¹ 'wwwboard/data'
+     ‹ŒY“„Œ¬@ ·‡”nH ‡‹”qô ÔŠ×.
+     2.x–úˆø Œ·¸ ÌÎ@ Ôì ô‘CÊ ‹fø‰‚@, •ŒmÊ ±’Ÿ‹g CGI‘È¶Œm
+     ‰‚‘WÅ DBŒ¤ ·‡”w_ŠÀˆËÊ ‘`Š×.
+       
+    4. f”ˆ
+
+      ŒÓø 'test' DBŒ¤ ¸”p”Â CrazyWWWBoard¹ Link”nˆëØ ”nŠÀ HTMLM«ŠI
+      BrowserÅ Location ’A@ ÄŒ@Å ˆäŒmŒ¤ ÒŒa”pŠ×.
+
+      http://SERVER DOMAIN/±’ŸˆäŒm/CrazyWWWBoard.cgi?db=test
+
+      ex) <A HREF="http://nobreak.cgiserver.net/cgi-bin/wwwboard/CrazyWWWBoard.cgi?db=test">CrazyWWWBoard</A>
+
+      Note) ICONÊ ‰šì‘M ŠI_ˆÃŠI, f”€Ê ˆÃÌ‹h‹¥ŠÀ Server Configuration¹
+            ‘U‘C”w‘uìİ ”pŠ×. (ÄŒ@ HTTPd Configuration ‘ú‘U)
+
+   5. DB ˆ‘E
+
+      - cd wwwboard
+      - ./removeDB DB_NAME
+
+      Š×»ˆø ­‡”p ”«ŒçÊ ŠI_Œå ˆ‘EˆŸ nŒ‹gŠ×.
+      ---------------------------------
+      Database name : test
+      Database filename : data/test.gdbm
+      Database directory : data/test
+      ---------------------------------
+
+      .. Deleted data/test.gdbm
+      .. Deleted data/test
+
+
+    6. CGI Configuration
+      'wwwboard/CrazyWWWBoard.conf'Œ¤ @‹“lŒm Lì ‰‚ø‹g ‘u¬¹ ¶Œå
+      ØdÅ ”­ˆä@ ŒÀˆÒ ô‘C”pŠ×.
+      ¹ “ÂÍ¸ CGIˆŸ f”€b Ø‹^¶Œm ‘ú‘U”nfŒm, ô‘C‡”vÊ xŒm ù‹‹gŠ×.
+      ‘, ’Â“ÂÍ¹ Š×b ”q ”i„ˆŸ öŠ×.
+
+    7. DB Configuration
+
+      ˆÒb“Å ŒïŒn¶‰‚ ”«Œç@« 'Administration' Icon¹ “KŒ­ ”s¶Œm ô‘C”qô
+      ÔŠ×.
+
+      Web Board Information
+      - New Password  : •Œm ïo˜”¡Œ¤ ±‘C”pŠ×.
+      - Title Message : ŒïŒn¶‰‚ “ŠÚ@ ŠI“WŠN Text ÊŠ×.
+      - HomePage URL  : ØdÅ ”¦“âÊ‘–ˆŸ Œ³“H‹h ‘uĞÊŠ×
+                        (ŒJb ICONÊ ’‚Œa‹f‘– ÈŠÀŠ×)
+      - Back URL      : ”¦“âÊ‘– URLl Êú“âÊ‘– URLÊ Š×Œ¤ˆÚŒ ±‘C”pŠ×.
+                        (ŒJb ICONÊ ’‚Œa‹f‘– ÈŠÀŠ×)
+
+      Administrator Contact Information
+      - Administrator Name    : ˆúŒ¬ØÅ ÊŒ¥
+      - Administrator E-mail  : ˆúŒ¬Ø E-mail
+      - Mail to Administrator : ˆÒbOÊ ’~ˆŸ‹fŒç ‰v ŠZ‹¹ E-mailŒm
+                               ˆúŒ¬Ø@ˆÒ “‹¶”q‘– ˆß‘C”pŠ×.
+      - Mail to Poster        : ˆúŒb‰zÊ Ù¸‹fŒç, ˆúŒb Šé“ ˆÒbOÅ
+                                Ù¸Ø@ˆÒ “‹¶”q‘– E-mail “‹¶”q‘– ˆß‘C”pŠ×.
+
+      Article Configuration
+      - List Order        : ŒïŒn¶‰‚ †c¹ ¯“b”pŠ×. (ŠN‘£ö, ˆúŒb‰zö)
+      - Name First        : ŒïŒn¶‰‚@« ÊŒ¥Ê ”Db‹h ¥’ŸŒ¤ ¯“b”pŠ×.
+      - Article Number    : ŒïŒn¶‰‚b ˆÒbOÅ ˜”¡”DbHÌŒ¤ ¯“b”pŠ×.
+      - Virtual Number    : ˆÒbOÅ ˜”¡Œ¤ OŒ¬ùÌ ˜”¡Œm ”Db”q‘–, ˆÒbO
+                            ˆ·ô@ ‹›‹ñ ˆæŠ‹fŠÀ ÍŒb˜”¡Œm ”Db”q‘– ¯“b”pŠ×.
+      - Folder Icon       : ˆúŒb‰z°‰‚@« ­‹”p, “øŠó ÄÊ’ÚÊ ”Db‹h‘–
+                            ¯“b”pŠ×.
+      - File Upload       : “ÂÍ õŒm‹™¹ ”ƒ‹HÌŒ¤ ¯“b”pŠ×.
+      - File type Icon    : õŒm‹…‹g “ÂÍ@ ˆú”p ÄÊ’Ú ”DbHÌŒ¤ ¯“b”pŠ×.
+      - Link Target       : Ø‹^ Œ³“H‹g ‰zÊ Current Frame¶Œm ’‚Œa‹h‘–
+                            Full Screen¶Œm ’‚Œa‹h‘–Œ¤ ˆß‘C”pŠ×.
+                            (Frame¹ ‡‹”p ”¦“âÊ‘–@«Œ¶ ”½ˆøˆŸ ÔŠ×)
+      - Post Permission   : ˆÒbO Ù¸ ‰f”p¹ ¯“b”pŠ×.
+      - View Mode         : ”Db‹h îìŒ¤ ¯“b”pŠ×.
+      - HTML Mode         : ˆÒbO ¹M‘~ HTML TAGŒ¤ Ìc”q‘– ”«Œç@ ‰vŠéŒm
+                            ’‚Œa ”q‘– ˆß‘C.
+                            JbŒ¤ ¯“b”nŒç, TAGØ’[ˆŸ ”«Œç@ ”Db‹fˆë, URL,
+                            E-mail‹¸ Ø‹^¶Œm Œ³“HˆŸ ˆÇŒ` ”D‰‚‹gŠ×.
+      - Articles per Page : ”p ”«ŒçŠå ¶H‘x ‰zÅ ˆ·ôŒ¤ ‘–‘C”pŠ×.
+
+      User Interface / Common
+      - HTML Header, Tailer : Œî‹‡ ”«Œç’‚ŒaÅ ŒÑŒ¬ÌÎ(<head>Œm bÙ”nŠÀ)ˆø
+                            ‰½Œ¬ÌÎ(</head>Œm Š@ŠIŠÀ)¹ bY“z@ ‰‚¹ùå‹g
+                            “ÂÍŒm ”€”qˆËÌ‘–, ‡‹ØˆŸ ‘—‘A Ù¸”qˆËÌ‘–
+                            ¯“b”pŠ×.
+      - HTML Header       : ¥Å ±‘CÊ no Í‹¥ ¹ HTMLÊ ŒÑŒ²Œ¹Œm ŠI“WŠLŠ×.
+      - HTML Tailer       : Œ´’¡ˆŸ‘–Œm ‰½Œ²Œ¹@ ŠI“WŠLŠ×.
+      - Default Text      : H‰‚@ ‰z¹ kŒ¬ Ù¸”w‹mŒç, ‡‹ØˆŸ ‰z¹ °Œ`”q‹¥
+                            Text Window@ Ø‹^¶Œm ”D‰‚‹gŠ×. ‡‹Ø@ˆÒ ŒìŒì
+                            ”vŒïÅ ‘šÅŒ¤ ”nˆëØ”q‹¥ ­‹”nˆÒ ‡‹‹hô ÔŠ×.
+
+      User Interface / List Module
+      - Border Size       : Œï“ö¶‰‚”«ŒçÅ “vÊë ‹m‰°Œ¤ ¯“b”pŠ×.
+      - Font Size         : ŒïŒn¶‰‚”«ŒçÅ ‰zØ “H‰‚Œ¤ ¯“b”pŠ×.
+      - Title Font Color  : ŒïŒn¶‰‚”«Œç@« “WÊ“°”vŒï(ÊŒ¥,ŠN‘£)Å ‰zØ –“
+      - Title Bg Color    : ŒïŒn¶‰‚”«Œç@« “WÊ“°”vŒïÅ ˆˆä–
+      - Article Font Color: ŒïŒn¶‰‚”«Œç@« ˆÒbOÅ ‰zØ –“
+      - Article Bg Color  : ŒïŒn¶‰‚”«Œç@« ˆÒbOÅ ˆˆä –“
+
+      User Interface / Read Module
+      - Title Border Size : ‰z ¶‰‚”«ŒçÅ ‘EŒï “vÊë ‹m‰°Œ¤ ¯“b”pŠ×.
+      - Text Border Size  : ‰z ¶‰‚”«ŒçÅ ŠZ‹ “vÊë ‹m‰°Œ¤ ¯“b”pŠ×.
+      - Font Size         : ‰z ¶‰‚”«ŒçÅ ‰zØ “H‰‚Œ¤ ¯“b”pŠ×.
+      - Title Font Color  : ‰z ¶‰‚”«Œç@« ‘EŒïÅ ‰zØ –“
+      - Title Bg Color    : ‰z ¶‰‚”«Œç@« ‘EŒïÅ ˆˆä –“
+      - Text Font Color   : ‰z ¶‰‚”«Œç@« ŠZ‹Å ‰zØ “
+      - Text Bg Color     : ‰z ¶‰‚”«Œç@« ŠZ‹Å ˆˆä –“
+      - Text Font Type    : ‰z ¶‰‚”«Œç@« ŠZ‹Å “÷“¬ ”œ“a
+                            ‹T”D‹Å ‰š‘œ¹ †‘–”n‰‚ ¥”w, fixed width ”œ“aÅ
+                            “÷“¬Œ¤ ‘–‘C”nH ‡‹”qô ÔŠ×.
+      User Interface / Write Module
+      - Title Font Color  : ‰z °‰‚”«Œç@« “WÊ“°”vŒï(ÊŒ¥,‘EŒï)Å ‰zØ –“
+      - Title Bg Color    : ‰z °‰‚”«Œç@« “WÊ“°”vŒïÅ ˆˆä –“
+
+      User Interface / Mail Module
+      - Mail Header, Tailer : “ë‘–Œm úŠÜ‹h •Œm ˆÒbOÅ ŠZ‹‘~ ŒÑŒ²Œ¹ˆø
+                            ‰½Œ²Œ¹¹ bY“z@ ‰‚¹ùå‹g “ÂÍŒm ”€”qˆËÌ‘–,
+                            ‡‹ØˆŸ ‘—‘A Ù¸”qˆËÌ‘– ¯“b”pŠ×.
+      - Mail Header       : ¥Å ±‘CÊ no Í‹¥ ¹ ŠZ‹Ê ŒÑŒ²Œ¹Œm ŠI“WŠLŠ×.
+      - Mail Tailer       : Œ´’¡ˆŸ‘–Œm ‰½Œ²Œ¹@ ŠI“WŠLŠ×.
+
+  3. HTTPd Configuration
+
+  ”`Œm‰vŒDÅ ±’Ÿ ¥’Ÿl Server Configuration@ ‹›‹ñ Š×»ˆø ˆ®¸ _Œ™ˆŸ
+  ~”qô ÔŠ×. Œ¶Ş ”`Œm‰vŒDÅ f”€@ _Œ™ˆŸ ~”nSŠ×Œç, '‰fˆë ±’Ÿ'
+  †¹ ˆëŒ`”w¶‰‚ x‹óŠ×.
+
+  *. ‰fˆë ±’Ÿ
+     £«–ˆŸ ‘Wå”nŠÀ ‹ŒY“„Œ¬Œ¤ 'httpd'‹ñ ˆŸ‘C”nŒç, Document rootŠÀ Í|ù¶Œm
+     'httpd/htdocs'Œå, CGI rootŠÀ 'httpd/cgi-bin'ÊŠ×.
+
+     1) H‰‚@ •Œm ‹ŒY“„Œ¬(cgi-pub)Œ¤ ¸”pŠ×.
+       - cd httpd
+       - mkdir cgi-pub      ('httpd/cgi-pub' ¸)
+
+      'httpd/cgi-pub/wwwboard' ‹ŒY“„Œ¬@ CWB¹ ±’Ÿ”pŠ×.
+
+     2) «– ±‘C@ ÄŒ@Å ‡”v¹ ’~ˆŸ”pŠ×.
+     [NCSA HTTPd] conf/srm.conf
+       AddType application/x-httpd-cgi .cgi
+       Alias /cgi-pub/ /FULL_PATH/cgi-pub/
+
+     [NCSA HTTPd] conf/access.conf ([¯“b] ‹ŒY“„Œ¬ ŒïŒn ¶‰‚Œ¤ Disable b“QŠ×)
+       <Directory /cgi-pub/*>
+         Options ExecCGI FollowSymLinks
+       </Directory>
+
+     3) «–Œ¤ åbÙ ”pŠ×.
+
+     4) ‡‹ØŠÀ ÄŒ@Å ˆäŒm@« CWB¹ f”€”qô ÔŠ×.
+       http://HOST_NAME/cgi-pub/wwwboard/CrazyWWWBoard.cgi
+
+     Note) cgi-binˆø cgi-pub Ê{Å ‹ŒY“„Œ¬@« CGIˆŸ ˆÃÌ‹f‰† ˜”pŠ×Œç,
+           '1. f”€Ê ˆÃÌ‹fŠÀ ˆäŒ, ”wˆß† 1' ‘ú‘U     
+
+    1. f”€Ê ˆÃÌ‹fŠÀ ˆäŒ
+      HTTP Daemon(Web Server)¸ ¶Æ¹ ¥”w ‰‚¹ù¶Œm 'cgi-bin' Ê{Å
+      ‹ŒY“„Œ¬@ ±’Ÿ‹g CGI”«ÍÅ f”€¹ ˆÃÌ”pŠ×.
+
+       ** ”wˆß† 1 : Server Configuration ­ˆä
+       ‡‹ØŠÀ ÄŒ@l ˆ®¸ ‡”v¹ ’~ˆŸ”w ‘{¶Œm “ÂÍÅ ”¬ãØˆŸ 'cgi'ÊŒç
+       ÊŒ¤ CGIŒm Ìc”nH, ìŠ¾ Directory@«ŠI f”€“„Œn ±‘C”qô ÔŠ×.
+     
+       [NCSA HTTPd]   conf/srm.conf
+         AddType application/x-httpd-cgi .cgi
+     
+       ÊŠÀ Œî‹‡ ‹ŒY“„Œ¬@ ˆú”w ”¬ãØˆŸ 'cgi'Ê‰‚Œ¶ ”nŒç f”€Ê ‹ffŒm,
+       ˆæ‘C «ïYŒ¤ ”nŠÀ ˆõ@«ŠÀ ÊŒ¤ ”f”nŒ` ”qô ÔŠ×.
+       ‰v‹¥ŠÀ '† 2'Œ¤ ’‹”nˆÃŠI Š×»ˆø ˆ®Ê Í| ˆæ‘C@«ŠÀ CGI f”€¹
+       ˆÃÌ”qô ÔŠ×.
+
+       [NCSA HTTPd]   conf/access.conf
+         <Directory /admhome/*>   ## /admhome/ACCOUNT ˆæ‘C ‡‹Ø CGI f”€ ”ƒˆŸ
+           Options ExecCGI Indexes FollowSymLinks
+         </Directory>
+
+        <Directory /home/*>      ## /home/ACCOUNT ˆæ‘C ‡‹Ø CGI f”€ ĞˆŸ
+          Options Indexes FollowSymLinks
+        </Directory>
+
+      Note) ‰‚“W Web ServerÅ ˆäŒ‹T ¥l ï`”p ±‘C¹ ”w‘uìİ ”pŠ×.
+
+      ** ”wˆä† 2: fbˆ¡ ±‘C “ÂÍ ­ˆä
+      '”wˆß† 1'Ê HÅ’Ÿ ÈŠ×Œç, '/cgi-bin'w@ ±’ŸŒ¤ ”nHİ ”pŠ×.
+      'cgi-bin' w@ CWB¹ ±’Ÿ”p”Â 'wwwboard' wÅ Œî‹‡ ‹ŒY“„Œ¬Œ¤
+       Document root(htdocs) ‹ŒY“„Œ¬ Ê”nŒm Ê‹^ ”pŠ×.
+       ex) httpd/cgi-bin/wwwboard/* -> httpd/htdocs/wwwboard/*
+
+      'wwwboard/CrazyWWWBoard.conf'Å ±‘C‘~ ‹ŒY“„Œ¬ ±‘C¹ ­ˆä”pŠ×.
+
+       Note) ‹ŒY“„Œ¬ ˆäŒm ±‘C‘~ '/PATH'ŠÀ Document rootŒ¤ ‰‚‘w¶Œm”p
+             “ŠéˆäŒmÊŒå, 'PATH'ŠÀ CrazyWWWBoard.cgiˆŸ ¥’Ÿ”nŠÀ ‹ŒY“„Œ¬Œ¤
+             ‰‚‘w¶Œm”p “ŠéˆäŒmŒm Ìc‹gŠ×.
+
+    2. ‰šì‘˜ ‰z‘£Œ¶Ê ”«Œç@ ’‚Œa‹h ˆäŒ
+      ‡‹ØÅ ”¦“âÊ‘– ˆæ‘C‹ˆø ˆ®Ê '/cgi-bin' Ê{Å ‹ŒY“„Œ¬@ ±’Ÿ ”nS¹
+      ˆäŒ, CGIÅ f”€“ÂÍÅ ”¬ãØˆŸ 'cgi'ÊŠó‹ñ‹T «–ˆŸ ÊŒ¤ Í| M«Œm
+      ”w¬”nˆë ‰v ŠZ‹¹ ’‚Œa”n‰‚ ‹¥MÊŠ×.
+
+      ** ”wˆß† : Server Configuration ­ˆä
+      [NCSA HTTPd]   conf/srm.conf
+        AddType application/x-httpd-cgi .cgi
+
+    3. ICONÊ ‰šì‘M ŠIbˆäŒ
+      '/cgi-bin' ‹ŒY“„Œ¬ ÄŒ@@ ±’ŸŒ¤ ”nS¹ˆäŒ ÊŠ×.
+      ÊŠÀ «–ˆŸ '/cgi-bin' Ê”n@ ±’Ÿ‹g Œî‹‡ ”«Í¸ CGI‹ñ ˆŸ‘C”n‰‚ ‹¥M@
+      Í| ICON, HTML ”«Í‹T f”€”nŒ` b‹T”n‰‚ ‹¥MÊŠ×.
+
+      ** ”wˆß† 1 : Server Configuration ­ˆä
+      Š×»ˆø ˆ®Ê 'cgi-bin' ‹ŒY“„Œ¬Œ¤ 'ScriptAlias'ˆŸ ÄŠÏ 'Alias'Œm ±‘C”nH
+      ”wˆß”qô ÔŠ×.
+      Ê‹¥ŠÀ |‹…b 'AddType'¶Œm ”¬ØØ 'cgi'Œ¤ CGIŒm Ìcb’Ïİ ”pŠ×.
+
+      [NCSA HTTPd]   conf/srm.conf
+        AddType application/x-httpd-cgi .cgi
+        #ScriptAlias /cgi-bin/ /PATH/cgi-bin/     ('#' Œm ‘u¬’RŒ¬”pŠ×)
+        Alias /cgi-bin/ /PATH/cgi-bin/     (cgi-bin¹ AliasŒm ±‘C”pŠ×)
+
+      Ê‹¥, ”¬ãØˆŸ öŠÀ '/cgi-bin'wÅ ‰‚‘WÅ CGIŠÀ f”€Ê ˆÃÌ‹ffŒm,
+      ‰‚‘WÅ CGI “ÂÍŒë¹ ­ˆä”nHİ ”pŠ×.
+      ‰‚‘WÅ CGI ­ˆäÊ ‹Ê’Ÿ Œö”pˆäŒ '”wˆß† 2'Œ¤ ”€”pŠ×.
+
+      ** ”wˆä† 2 : ICON ¥’Ÿ x‰Ü
+      '1. f”€Ê ˆÃÌ‹fŠÀ ˆäŒ, ”wˆß† 2'¹ ‘ú‘U”pŠ×.
+
+    4. DataBase Access Error : File open error
+      wwwboard/data/DB_NAME.gdbm Å PermissionÊ İŒö‹føˆÃŠI
+      DataBaseˆŸ ‘Wå”n‘– È¹ ˆäŒÊŠ×.
+      DataBaseˆŸ ‘Wå”pŠ×Œç Š×»ˆø ˆ®¸ ŒëŒh¶Œm Permission¹ ô‘C”pŠ×.
+      - cd wwwboard/data
+      - chmod 777 DB_NAME.gdbm
+
+    5. Your browser sent a non-HTTP compliant message 
+       ¥l ˆ®¸ ŒÜb‘–ˆŸ ˆÒbO °‰‚, ïo˜”¡ ”¬Ì ”«Œç‹@« ŠI“WŠIŒç
+       Š×»Å M‘EŒ¤ ”wˆß“„Œn ‘–b”pŠ×.
+     
+       1) ‡‹ØÅ è‹ñŒøŒ¤ nú”õ ‘]Œb“QŠ×.
+       2) è‹ñŒøˆŸ ±’Ÿ‹g ‹ŒY“„Œ¬@« ’ë“OˆúŒb “ÂÍ¹ ˆ‘E”pŠ×.
+          (NetscapeÅ ˆäŒ 'cookies.txt')
+       3) Š×b b‹T”pŠ×.
+
+     ¥Å M‘EŠÀ Netscape@« ~”pŠ×.
+
+    6. Access logging(logs/access.log) fail.
+       wwwboard/logs ‹ŒY“„Œ¬@ Œm‰v“ÂÍ¹ ¸”qô ö¹ˆäŒ ŠI“WŠLŠ×.
+       Š×»ˆø ˆ®Ê ‹ŒY“„Œ¬ “ÙkÅ¹ ô‘C”pŠ×.
+       
+       - chmod 777 wwwboard/logs
+
+    7. DataBase Access Error : File open error
+       ŒÓø createDB ŒëŒh¶Œm DBˆŸ wwwboard/data ‹ŒY“„Œ¬@ ¸‹fì
+       ÔŠÀ‘– ”¬Ì”pŠ×. ('test' DBÅ ¸ “ÂÍŒë¸ 'test.gdbm' ÊŠ×)
+       ‘Wå”pŠ×Œç, “ÂÍÅ “Ù¹oÅÊ ŠÛ””ÔˆÃŠI, Ğ­‘uˆŸ Š×Œ¤ˆäŒÊŠ×.
+       Š×»ˆø ˆ®Ê DB “ÂÍÅ “ÙkÅ¹ ô‘C”pŠ×.
+
+       - chmod 666 wwwboard/data/DB_NAME.gdbm
+
+       Êl ˆ®¸ _Œ™ŠÀ CrazyWWWBoard.conf “ÂÍ@« ˆúŒbÌÎ ±‘CÊ
+       İŒö‹fì Ô‰‚ ‹¥MÊŠ×. “ÂÍ¹ Lˆë “ÂÍˆø ‹ŒY“„Œ¬ ¸ ’i‰‚
+       “ÙkÅ¹ ùû”õ ±‘C”nŒç, DB ¸v ‰‚“W “ÂÍ ¸b Ø‹^¶Œm
+       “ÙkÅÊ ŒÀ’~ì ‘˜Š×.
+
+    8. Upload directory(data/test) creation fail.
+       wwwboard/data ‹ŒY“„Œ¬Å “ÙkÅÊ ŠÛ””Ô‰‚ ‹¥MÊŠ×.
+       Š×»ˆø ˆ®Ê ‹ŒY“„Œ¬ “ÙkÅ¹ ô‘C”pŠ×.
+
+       - chmod 777 wwwboard/data
+
+  4. Directory ±Œë
+     
+    Î’€¹ ”K Directory w@ ÄŒ@l ˆ®¸ ‰W‘UÅ DirectoryˆŸ ¸‹gŠ×.
+     
+    wwwboard-VersionNumber --+-- message
+                             |
+                             +-- icon -- type
+                             |
+                             +-- data
+                             |
+                             +-- logs
+                             |
+                             +-- qDecoder-VersionNumber
+                             |
+                             +-- gdbm-VersionNumber
+                             |
+                             +-- src
+
+    Directory 'wwwboard-VersionNumber'
+      - install-sh          (Install Script)
+      - README              (This document)
+      - CrazyWWWBoard.cgi   (CGI Binary)
+      - createDB            (DB creater)
+
+    Directory 'message'   -> CGIŠZ@« ‘ú‘U”nŠÀ ”«Í‹‰
+      - head.html         (bY“z ‰‚¹ HTML ŒÑŒ²Œ¹ˆø ‰½Œ²Œ¹)
+      - tail.html
+      - mailhead.txt      (bY“z ‰‚¹ ŒÜÍ ŒÑŒ²Œ¹ˆø ‰½Œ²Œ¹)
+      - mailtail.txt
+      - help.txt          (‹T’Œ¹ ”«Í)
+     
+    Directory 'icon'    -> CGI@« ‡‹‹fŠÀ ICON
+
+    Directory 'type'    -> õŒm‹™ “ÂÍ@ ‹›Œ£ ICON
+
+    Directory 'data'     -> DB(Data Base)ˆŸ ˆúŒ¬‹fŠÀ Directory
+      - DB_NAME.gdbm      (‡‹ØˆŸ ‡‹”q DBŒë)
+      - DB_NAME           (õŒm‹™‹g ØŒˆŸ øã‹h ‹ŒY“„Œ¬)
+
+    Directory 'logs'     -> Œm‰vˆŸ øã‹gŠ×.
+      - access.log        (‡‹ ‰‚ŒnÊ ŠQŠÀŠ×)
+      - error.log         (@ŒN ‰‚ŒnÊ ŠQŠÀŠ×)
+
+-------- [ END ] --------
